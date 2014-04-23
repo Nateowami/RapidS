@@ -22,6 +22,20 @@ __widgetTypes.registerWidget("textarea", function (parentComposite, widgetElemen
     //Add the scrollpane to the parentComposite
     parentComposite.add(scrollPane, __widgetOps.applyWidgetConstraint(id));
 
+	//add word wrap unless specified not to
+	//if it has a "wrap" attribute
+	if(widgetElement.getAttributeNode("wrap") != null){
+		//if word wrap is set to true
+		if(widgetElement.getAttributeNode("wrap").getNodeValue() == "true"){
+			widget.setLineWrap(true);
+			widget.setWrapStyleWord(true);
+		}
+	}
+	//if it's unspecified default is to use word wrap
+	else{
+		widget.setLineWrap(true);
+		widget.setWrapStyleWord(true);
+	}
+
     return widget;
 });
-

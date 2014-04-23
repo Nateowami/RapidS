@@ -227,7 +227,7 @@ spinner {
         text.txt</button>
     <checkbox class="standardPosition" onclick="console.log('My Checkbox')">My
     Checkbox</checkbox>
-    <textarea id="rightSide">Enter multiple lines of text here!</textarea>
+    <textarea id="rightSide" wrap="true">Enter multiple lines of text here!</textarea>
     <tabpane id="tabP"> <tab value="Tab1" id="tab1">
     <button class="standardPosition" id="showLogo" onclick="showLogo()">Show
         RapidS logo</button>
